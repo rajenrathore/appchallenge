@@ -18,7 +18,7 @@ kubectl rollout status deployment/app2
 
 # Get HTTP responses from the applications
 echo "Response from app1:"
-kubectl exec $(kubectl get pods -l app=aap1 --no-headers -o custom-columns=":metadata.name") -- curl -s http://localhost:6000/
+kubectl exec $(kubectl get pods -l app=app1 --no-headers -o custom-columns=":metadata.name") -- curl -s http://localhost:6000/
 
 echo "Response from app2:"
-kubectl exec $(kubectl get pods  app=aap2 --no-headers -o custom-columns=":metadata.name") -- curl -s http://localhost:6001/
+kubectl exec $(kubectl get pods -l app=app2 --no-headers -o custom-columns=":metadata.name") -- curl -s http://localhost:6001/

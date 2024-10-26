@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  repository: rajendrarathore/app2
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 6001
+
+resources: {}

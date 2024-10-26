@@ -9,9 +9,10 @@ docker push rajendrarathore/app1:latest
 docker push rajendrarathore/app2:latest
 
 # Apply Kubernetes manifests
-kubectl apply -f k8s/app1-deployment.yaml
-kubectl apply -f k8s/app2-deployment.yaml
-
+#kubectl apply -f k8s/app1-deployment.yaml
+#kubectl apply -f k8s/app2-deployment.yaml
+helm install app1 ./app1-chart
+helm install app2 ./app2-chart
 # Wait for deployments to be ready
 kubectl rollout status deployment/app1
 kubectl rollout status deployment/app2

@@ -3,6 +3,7 @@ replicaCount: 1
 image:
   repository: rajendrarathore/app1 
   tag: latest
+  imagePullPolicy: Always
 
 service:
   type: ClusterIP

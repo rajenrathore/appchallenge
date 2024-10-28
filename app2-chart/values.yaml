@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: rajendrarathore/app2
   tag: latest
-
+  imagePullPolicy: Always
 service:
   type: ClusterIP
   port: 6001

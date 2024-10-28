@@ -15,6 +15,7 @@ spec:
       containers:
       - name: app2
         image: rajendrarathore/app2:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 6001
 ---

@@ -30,6 +30,7 @@ else
     docker build -t rajendrarathore/app1:latest apps/app1
     echo "$app1_HASH" > "$HASH_FILE_app1"  # Update the hash file
     docker push rajendrarathore/app1:latest ##push docker image app1
+    helm uninstall app1 ./app1-chart # uninstall hrlm app1
 fi
 
 # Compare hashes for app2
@@ -40,6 +41,7 @@ else
     docker build -t rajendrarathore/app2:latest apps/app2
     echo "$app2_HASH" > "$HASH_FILE_app2"  # Update the hash file
     docker push rajendrarathore/app2:latest #push docker image app2
+    helm uninstall app2 ./app2-chart # uninstall helm app2
 fi
 # Build Docker images
 #docker build -t rajendrarathore/app1:latest apps/app1
